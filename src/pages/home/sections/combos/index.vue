@@ -1,16 +1,23 @@
 <template>
   <div class="combos">
     <div class="row">
-      <div class="col-xl-6">
+      <div class="col-xl-4 mx-auto">
         <combo></combo>
       </div>
-      <div class="col-xl-6">
+      <div class="col-xl-4 mx-auto">
         <combo></combo>
       </div>
-      <div class="col-xl-6">
+    </div>
+    <div class="row">
+      <div class="col-xl-4 mx-auto">
         <combo></combo>
       </div>
-      <div class="col-xl-6">
+      <div class="col-xl-4 mx-auto">
+        <combo></combo>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-4 mx-auto">
         <combo></combo>
       </div>
     </div>
@@ -29,6 +36,7 @@
 
 <style lang="scss" scoped>
   .combos {
-    
+    margin-top: 2.5rem;
+    margin-bottom: -2.5rem;
   }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="product">
     <div class="thumbnail">
-      <img class="img-fluid" src="~@/assets/images/products/im-04.png" alt="">
+      <img class="img-fluid" src="~@/assets/images/stores/products/im-04.png" alt="">
     </div>
     <div class="title">Than tre cành</div>
     <div class="price">219.000<sup>đ</sup></div>

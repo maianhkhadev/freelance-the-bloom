@@ -1,9 +1,11 @@
 <template>
   <div class="your-basket" v-on:click="showSubmenu">
-    <img class="icon" width="25" src="" alt="">
-    <div style="flex: 1;">
-      <div class="title">Your Basket</div>
-      <div class="number">8 items</div>
+    <div class="media">
+      <img class="icon" src="~@/assets/images/root/header/basket.png" alt="">
+      <div class="media-content">
+        <div class="title">Your Basket</div>
+        <div class="number">8 items</div>
+      </div>
     </div>
 
     <div class="sub-menu">
@@ -45,22 +47,24 @@
 <style lang="scss" scoped>
   .your-basket {
     position: relative;
-    display: flex;
-    -webkit-box-align: start;
-    align-items: flex-start;
-    text-align: right;
     cursor: pointer;
 
-    .icon {
-      vertical-align: middle;
-      border-style: none;
-      margin-right: 1rem;
-    }
-    .title {
+    .media {
+      padding: 1.5rem 1.125rem;
 
-    }
-    .number {
-
+      .icon {
+        align-self: center;
+        margin-right: 1rem;
+      }
+      .title {
+        color: #605a54;
+        font-size: 0.875rem;
+        font-weight: 700;
+      }
+      .number {
+        color: #646464;
+        font-size: 0.875rem;
+      }
     }
 
     .sub-menu {
@@ -69,10 +73,11 @@
         top: 100%;
         right: 0;
         width: 150%;
-        background-color: #f9f9f9;
+        background-color: #faf0e6;
         border-radius: 1rem;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         padding: 1rem;
+        z-index: 1070;
 
         @media only screen and (max-width: 600px) {
           position: unset;
