@@ -2,10 +2,10 @@
   <div class="section">
     <div class="container">
       <div class="row">
-        <div class="col-xl-6 mx-auto">
-          <div class="title">Tet’s Gift Sets</div>
+        <div class="col-xl-6 mx-auto text-center">
+          <div class="title">Giỏ quà Tết</div>
           <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p>Gợi Ý Quà Tết Cho Bạn - một món quà ý nghĩa không cần quá cầu kì, sang trọng, chỉ cần đong đầy thành ý của người tặng.</p>
           </div>
         </div>
       </div>
@@ -33,7 +33,6 @@
 <style lang="scss" scoped>
   .section {
     position: relative;
-    text-align: center;
     padding-top: 6.5rem;
     padding-bottom: 5rem;
 
@@ -51,15 +50,23 @@
     }
     .deco-01 {
       position: absolute;
-      top: -3.5rem;
+      top: -6.5rem;
       right: 0;
       z-index: -1;
+
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
     }
     .deco-02 {
       position: absolute;
-      top: 15%;
+      top: 0;
       left: 0;
       z-index: -1;
+
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
     }
   }
 </style>

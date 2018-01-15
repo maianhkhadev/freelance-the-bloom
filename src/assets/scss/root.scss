@@ -27,7 +27,7 @@
 @import "node_modules/bootstrap/scss/media";
 // @import "node_modules/bootstrap/scss/list-group";
 // @import "node_modules/bootstrap/scss/close";
-// @import "node_modules/bootstrap/scss/modal";
+@import "node_modules/bootstrap/scss/modal";
 // @import "node_modules/bootstrap/scss/tooltip";
 // @import "node_modules/bootstrap/scss/popover";
 // @import "node_modules/bootstrap/scss/carousel";
@@ -38,14 +38,28 @@
 
 html {
   font-size: 16px;
+
+  @media screen and (min-width: 600px) and (max-width: 1200px) {
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+  }
 }
 
 body {
-  background-image: url('~@/assets/images/root/bim.jpg');
+  background-image: url('~@/assets/images/layouts/default/bim.jpg');
   background-repeat: repeat;
   background-position: center;
   background-size: contain;
   font-family: 'Modum';
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 button {
@@ -59,8 +73,22 @@ button {
   }
 }
 
-@media (min-width: 1200px) {
-  .container {
-      max-width: 1200px;
+@media (min-width: 900px) {
+  .modal-dialog {
+    max-width: 680px;
   }
+}
+
+.btn-brown {
+  color: rgba(#000000, 0.5);
+  background-color: #dbcdbf;
+  border-color: #dbcdbf;
+}
+.btn-brown:hover {
+  color: rgba(#000000, 0.5);
+  background-color: darken(#dbcdbf, 15%);
+  border-color: darken(#dbcdbf, 15%);
+}
+.btn-brown.focus, .btn-brown:focus {
+  box-shadow: 0 0 0 .2rem rgba(#dbcdbf, 0.5);
 }

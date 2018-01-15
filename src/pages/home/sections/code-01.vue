@@ -3,50 +3,50 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-6 align-self-end">
-          <div class="title">Celebrate your own Tet with our collective gifts.</div>
+          <div class="title">MANG TẾT VỀ NHÀ VỚI NHỮNG SẢN VẬT SẠCH-LÀNH.</div>
           <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p>Quà tết độc đáo và tốt cho sức khỏe.  Nguyên liệu chọn lọc, sạch và lành từ Đất Mẹ. Nhiều lựa chọn quà tặng cho bạn và cho người thân thương.</p>
           </div>
           <div class="row mb-3">
-            <div class="col-xl-6">
+            <div class="col-6">
               <div class="media">
                 <img src="~@/assets/images/pages/home/sections/code-01/icon-01.png" alt="">
                 <div class="media-content">
-                  Lorem ipsum dolor sit amet consectetur
+                  Sản phẩm thuần tự nhiên
                 </div>
               </div>
             </div>
-            <div class="col-xl-6">
+            <div class="col-6">
               <div class="media">
                 <img src="~@/assets/images/pages/home/sections/code-01/icon-02.png" alt="">
                 <div class="media-content">
-                  Lorem ipsum dolor sit amet consectetur
+                  Nguyên liệu được trồng sạch
                 </div>
               </div>
             </div>
             <div class="col-xl-12">
               <hr>
             </div>
-            <div class="col-xl-6">
+            <div class="col-6">
               <div class="media">
                 <img src="~@/assets/images/pages/home/sections/code-01/icon-03.png" alt="">
                 <div class="media-content">
-                  Lorem ipsum dolor sit amet consectetur
+                  Sản phẩm không sử dụng hóa chất
                 </div>
               </div>
             </div>
-            <div class="col-xl-6">
+            <div class="col-6">
               <div class="media">
                 <img src="~@/assets/images/pages/home/sections/code-01/icon-04.png" alt="">
                 <div class="media-content">
-                  Lorem ipsum dolor sit amet consectetur
+                  Không chất phụ gia và chất bảo quản
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-xl-6">
-          <img class="img-fluid" src="~@/assets/images/pages/home/sections/code-01/im-01.png" alt="">
+          <img class="img-fluid mt-3 mt-xl-0" src="~@/assets/images/pages/home/sections/code-01/im-01.png" alt="">
         </div>
       </div>
     </div>
@@ -61,21 +61,28 @@
     padding-top: 1rem;
     padding-bottom: 3rem;
 
+    @media screen and (max-width: 600px) {
+      padding-top: 5rem;
+    }
+
     .title {
       color: #7d644b;
-      font-size: 3.75rem;
+      font-size: 2.25rem;
       font-family: 'Bloom';
       font-weight: 700;
       font-style: italic;
-      letter-spacing: -0.125rem;
-      line-height: 1;
+      line-height: 1.2;
       margin-bottom: 1.125rem;
+
+      @media screen and (max-width: 600px) {
+        font-size: 3.125rem;
+      }
     }
     .content {
-      color: #87827c;
+      color: rgba(#000000, 0.6);
       font-size: 1rem;
       font-weight: 500;
-      margin-bottom: 2.75rem;
+      margin-bottom: 2.5rem;
     }
 
     hr {
@@ -103,12 +110,20 @@
       top: 0;
       left: 0;
       z-index: -1;
+
+      @media screen and (max-width: 600px) {
+        width: 50%;
+      }
     }
     .deco-02 {
       position: absolute;
       bottom: 4rem;
       left: 50%;
       z-index: -1;
+
+      @media screen and (max-width: 600px) {
+        left: 0;
+      }
     }
   }
 </style>

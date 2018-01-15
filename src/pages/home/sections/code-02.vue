@@ -6,10 +6,13 @@
           <img class="img-fluid" src="~@/assets/images/pages/home/sections/code-02/im-01.png" alt="">
         </div>
         <div class="col-xl-6 align-self-center">
-          <div class="title">Our Concept</div>
+          <div class="title">Thông điệp mùa Xuân</div>
           <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <p>Trao yêu thương và thi vị đến người thân thương với Quà Tết The Bloom.</p>
+            <p>Dù cho bao thay đổi, ý nghĩa chân phương của quà Tết sẽ luôn là lời thăm hỏi chân tình với người thân quý khi năm hết Tết đến.</p>
+            <p>Không dừng lại ở một món quà tặng tốt cho sức khoẻ từ sản vật thiên nhiên Việt Nam, sản phẩm quà Tết The Bloom còn là sự tri ân dành cho người thân, bạn hữu và đối tác.</p>
+            <p>The Bloom yêu cái đẹp, cái duyên, nên chăm chút từng bao bì, từng chi tiết nhỏ: Chiếc làn tre đựng quà được làm thủ công từ những làng nghề đan lát lâu năm, hoạ tiết in trên hộp quà được sáng tạo từ các chất liệu dân gian truyền thống,Tất cả tâm huyết của The Bloom làm cho món quà trở thành một niềm vui ngày Xuân thi vị.</p>
+            <p>Tết này, ngoài các sản phẩm đã quen thuộc với khách hàng: rượu trái cây lên men, trà sạch, các loại mứt ít đường, tinh dầu..., The Bloom có thêm nhiều món ngon từ những nguyên liệu chọn lọc nhất, tươi ngon nhất, nên bạn cứ yên tâm món quà The Bloom sẽ là quà tặng sức khỏe ý nghĩa mà an tâm đến người thân thương.</p>
           </div>
         </div>
       </div>
@@ -23,6 +26,17 @@
     position: relative;
     padding-top: 11.75rem;
 
+    @media screen and (max-width: 600px) {
+      padding-bottom: 5rem;
+    }
+
+    img {
+
+      @media screen and (max-width: 600px) {
+        margin-bottom: 1.25rem;
+      }
+    }
+
     .title {
       color: #7d644b;
       font-size: 1.25rem;
@@ -32,15 +46,21 @@
       margin-bottom: 1.25rem;
     }
     .content {
-      color: #87827c;
+      color: rgba(#000000, 0.6);
       font-size: 1rem;
       font-weight: 500;
     }
     .deco-01 {
       position: absolute;
       top: 0;
-      left: 40%;
+      left: 38%;
       z-index: -1;
+
+      @media screen and (max-width: 600px) {
+        top: 5%;
+        left: 26%;
+        width: 50%;
+      }
     }
   }
 </style>

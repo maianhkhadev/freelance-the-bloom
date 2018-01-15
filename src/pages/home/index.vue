@@ -4,13 +4,13 @@
 
     <section-02></section-02>
 
-    <section-03></section-03>
-
     <deal></deal>
 
-    <section-04></section-04>
+    <section-03 id="section-03"></section-03>
 
-    <section-05></section-05>
+    <section-04 id="section-04"></section-04>
+
+    <section-05 id="section-05"></section-05>
   </div>
 </template>
 

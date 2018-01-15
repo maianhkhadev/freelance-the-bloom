@@ -1,29 +1,53 @@
 <template>
-  <div class="section">
-    <div class="container">
+  <div class="container">
+    <div class="section">
       <div class="row">
-        <div class="col-xl-5 ml-auto">
-          <div class="title">Reasons To Believe</div>
+        <div class="col-xl-12">
+          <div class="title">Tiêu chí chất lượng sản phẩm The Bloom</div>
           <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <div class="row">
+              <div class="col-xl-6">
+                <p>Nguyên liệu từ từ thịt:</p>
+                <ul>
+                  <li>Từ trang trại chăn nuôi an toàn, uy tín</li>
+                  <li>Không sử dụng chất tăng trọng và chất tạo nạc</li>
+                  <li>Không sử dụng hàng the và chất phụ gia, an toàn cho sức khỏe</li>
+                </ul>
+                <p>Nguyên liệu rau củ quả:</p>
+                <ul>
+                  <li>Từ các nhà vườn trồng theo hướng hữu cơ</li>
+                  <li>Không sử dụng phân bón hóa học và chất tăng trưởng</li>
+                  <li>Không sử dụng màu thực phẩm và chất bảo quản</li>
+                </ul>
+              </div>
+              <div class="col-xl-6">
+                <p>Quy trình chế biến:</p>
+                <ul>
+                  <li>Thu hoạch nguyên liệu chọn lọc  và không qua xử lý hóa chất hay tác động nhiệt cao để giữ lại các vitamins và chất ngọt tự nhiên của nguyên liệu</li>
+                  <li>Quy trình chế biến theo chuẩn vệ sinh an toàn thực phẩm, lấy sức khỏe người sử dụng làm tiêu chí hàng đầu</li>
+                  <li>Sử dụng bao bì có nguồn gốc thiên nhiên và thân thiện với sức khỏe người dùng</li>
+                </ul>
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="col-xl-12">
+          <img class="img-fluid w-100" src="~@/assets/images/pages/home/sections/code-05/deco-01.png" alt="">
         </div>
       </div>
     </div>
-    <img class="deco-01" src="~@/assets/images/pages/home/sections/code-05/deco-01.png" alt="">
   </div>
 </template>
 
 <style lang="scss" scoped>
   .section {
-    position: relative;
+    border-top: 0.125rem solid #e4dbcf;
     padding-top: 5rem;
-    padding-bottom: 30rem;
+    padding-bottom: 5rem;
 
     .title {
       color: #7d644b;
-      font-size: 1.125rem;
+      font-size: 1.25rem;
       font-family: 'Bloom';
       font-weight: 700;
       text-transform: uppercase;
@@ -31,15 +55,14 @@
       margin-bottom: 1.25rem;
     }
     .content {
-      color: #87827c;
+      color: rgba(#000000, 0.6);
       font-size: 1rem;
       font-weight: 500;
-    }
-    .deco-01 {
-      position: absolute;
-      top: 4.625rem;
-      left: 0;
-      z-index: -1;
+      margin-bottom: 2rem;
+
+      p {
+        color: rgba(#000000, 0.75);
+      }
     }
   }
 </style>

@@ -1,27 +1,39 @@
 <template>
   <div class="product">
-    <div class="thumbnail">
-      <img class="img-fluid" src="~@/assets/images/stores/products/im-04.png" alt="">
-    </div>
-    <div class="title">Than tre cành</div>
-    <div class="price">219.000<sup>đ</sup></div>
-    <div class="add-to-cart">
-      <img class="img-fluid" src="~@/assets/images/pages/home/sections/products/button.png" alt="">
-    </div>
+    <img class="img-fluid" :src="data.thumbnail.src" :alt="data.thumbnail.alt">
+    <div class="title">{{ data.name }}</div>
+    <div class="price">{{ data.price | currency }}<sup>đ</sup></div>
+    <button-add-one v-on:click.native="add">Thêm vào giỏ</button-add-one>
   </div>
 </template>
+
+<script>
+  import store from '@/store/index'
+
+  export default {
+    props: {
+      data: {
+        default: function () {
+          return { }
+        }
+      }
+    },
+    methods: {
+      add: function () {
+        let self = this
+        store.commit('basket/add', self.data)
+      }
+    }
+  }
+</script>
 
 <style lang="scss" scoped>
   .product {
     text-align: center;
 
-    .thumbnail {
-
-      img {
-        margin-bottom: 1.25rem;
-      }
+    img {
+      margin-bottom: 1.125rem;
     }
-
     .title {
       font-size: 1.25rem;
       font-family: 'Bloom';
@@ -29,11 +41,10 @@
       font-style: italic;
       margin-bottom: 0.25rem;
     }
-
     .price {
       font-size: 1rem;
       font-weight: 500;
-      margin-bottom: 1.125rem;
+      margin-bottom: 1rem;
     }
   }
 </style>

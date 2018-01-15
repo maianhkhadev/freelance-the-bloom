@@ -2,34 +2,38 @@
   <div class="section">
     <div class="container">
       <div class="row">
-        <img class="img-fluid deco-01" src="~@/assets/images/pages/home/sections/products/deco-01.png" alt="">
+        <img class="deco-01" src="~@/assets/images/pages/home/sections/code-04/deco-01.png" alt="">
         <div class="col-xl-6 mx-auto text-center">
-          <div class="title">Our Retailed Products</div>
+          <div class="title">Giỏ Quà Như Ý</div>
           <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            <p>Tạo giỏ quà Tết theo cách của bạn- là món quà chân thành bởi bạn luôn thấu hiểu người được tặng </p>
           </div>
           <div class="row tabs">
             <div class="col">
-              <div class="tab-link active" v-on:click="showTab('cate-01', $event)">Rượu</div>
+              <div class="tab-link active" v-on:click="showTab('cate-03', $event)">Lai rai ngày Tết</div>
             </div>
             <div class="col">
-              <div class="tab-link" v-on:click="showTab('cate-02', $event)">Chăm sóc sức khỏe</div>
+              <div class="tab-link" v-on:click="showTab('cate-02', $event)">Vui khỏe ngày Xuân</div>
             </div>
             <div class="col">
-              <div class="tab-link" v-on:click="showTab('cate-03', $event)">Trà • Café</div>
+              <div class="tab-link" v-on:click="showTab('cate-01', $event)">Thức uống ngày Tết</div>
             </div>
           </div>
         </div>
         <div class="col-xl-12">
-          <div id="cate-01" class="tab-content active">
-            <products></products>
+          <div id="cate-03" class="tab-content active">
+            <products collection="003"></products>
           </div>
           <div id="cate-02" class="tab-content">
-            <products></products>
+            <products collection="002"></products>
           </div>
-          <div id="cate-03" class="tab-content">
-            <products></products>
+          <div id="cate-01" class="tab-content">
+            <products collection="001"></products>
           </div>
+        </div>
+        <div class="col-xl-12 text-center">
+          <div class="title mt-4 mb-5">Phụ kiện giỏ quà Tết</div>
+          <products collection="004"></products>
         </div>
       </div>
     </div>
@@ -42,6 +46,20 @@
   export default {
     components: {
       'products': Products
+    },
+    methods: {
+      showTab: function (tabName, event) {
+        let tabContents = document.querySelectorAll('.tab-content')
+        tabContents.forEach((tabContent) => {
+          tabContent.className = tabContent.className.replace(' active', '')
+        })
+        let tabLinks = document.querySelectorAll('.tab-link')
+        tabLinks.forEach((tabLink) => {
+          tabLink.className = tabLink.className.replace(' active', '')
+        })
+        document.getElementById(tabName).className += ' active'
+        event.currentTarget.className += ' active'
+      }
     }
   }
 </script>
@@ -49,14 +67,21 @@
 <style lang="scss" scoped>
   .section {
     position: relative;
-    padding-top: 2.5rem;
-    padding-bottom: 5rem;
 
     .deco-01 {
       position: absolute;
-      top: 0;
+      top: 3rem;
       left: 0;
+
+      @media screen and (max-width: 600px) {
+        width: 50%;
+      }
     }
+  }
+  .section .container {
+    border-top: 0.125rem solid #e4dbcf;
+    padding-top: 5.5rem;
+    padding-bottom: 5rem;
 
     .title {
       color: #dc4551;
@@ -74,12 +99,17 @@
     .tabs {
       margin-top: 2.875rem;
       margin-bottom: 5.125rem;
+
+      .col {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
 
     .tab-link {
       color: #7d644b;
       background-color: transparent;
-      font-size: 0.875rem;
+      font-size: 1rem;
       font-weight: 700;
       text-align: center;
       border-bottom: 0.125rem solid #e4dbcf;
@@ -87,6 +117,10 @@
       padding-bottom: 1rem;
       transition: 0.3s;
       cursor: pointer;
+
+      @media screen and (max-width: 600px) {
+        height: 4rem;
+      }
 
       &:hover {
         border-bottom: 0.125rem solid #a18d7a;
@@ -102,13 +136,13 @@
 
       &.active {
         display: block;
-        animation: fadeIn 0.35s;
+        animation: fadeIn 1s;
       }
     }
 
     @keyframes fadeIn {
         from {
-          opacity: 0.5;
+          opacity: 0;
         }
         to {
           opacity: 1;
